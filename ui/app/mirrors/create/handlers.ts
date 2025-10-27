@@ -189,6 +189,7 @@ export function reformattedTableMapping(
       shardingKey: row.shardingKey,
       policyName: row.policyName,
       partitionByExpr: row.partitionByExpr,
+      snapshotNumPartitionsOverride: row.snapshotNumPartitionsOverride ?? 0,
     }));
 }
 
@@ -456,6 +457,7 @@ export async function fetchTables(
         shardingKey: '',
         policyName: '',
         partitionByExpr: '',
+        snapshotNumPartitionsOverride: 0,
       });
     }
   }

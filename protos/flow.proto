@@ -41,6 +41,7 @@ message TableMapping {
   string sharding_key = 7;
   string policy_name = 8;
   string partition_by_expr = 9;
+  uint32 snapshot_num_partitions_override = 10;
 }
 
 message SetupInput {

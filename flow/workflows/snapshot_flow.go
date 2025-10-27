@@ -189,9 +189,9 @@ func (s *SnapshotFlowExecution) cloneTable(
 		numRowsPerPartition = s.config.SnapshotNumRowsPerPartition
 	}
 
-	numPartitionsOverride := uint32(0)
-	if s.config.SnapshotNumPartitionsOverride > 0 {
-		numPartitionsOverride = s.config.SnapshotNumPartitionsOverride
+	numPartitionsOverride := s.config.SnapshotNumPartitionsOverride
+	if mapping.SnapshotNumPartitionsOverride > 0 {
+		numPartitionsOverride = mapping.SnapshotNumPartitionsOverride
 	}
 
 	snapshotWriteMode := &protos.QRepWriteMode{
